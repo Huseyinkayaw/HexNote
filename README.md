@@ -10,7 +10,12 @@ A lightweight single-page **sticky note** that lives on your macOS desktop. Ever
 - Font size up/down (`⌘+` / `⌘-`), find (`⌘F`), copy the whole note
 - Menu bar icon, launch at login, single-instance
 
-## Build & install
+## Download
+**[⬇ Download HexNote.dmg](https://github.com/Huseyinkayaw/HexNote/raw/main/release/HexNote.dmg)** — open it and drag **HexNote** into **Applications**.
+
+Requires macOS 13+ on Apple Silicon (M1 or later). The app is not notarized by Apple, so the first time you open it macOS will warn you: right-click the app → **Open** → **Open**, or go to **System Settings → Privacy & Security → Open Anyway**.
+
+## Build from source
 Requirements: macOS 13+, Xcode Command Line Tools.
 
 ```bash
@@ -30,4 +35,6 @@ Masaüstünde duran tek sayfalık, hafif bir **yapışkan not** uygulaması. Yaz
 - Yazı boyutu büyütme/küçültme (`⌘+` / `⌘-`), bulma (`⌘F`), tüm notu kopyalama
 - Menü çubuğu simgesi, girişte başlatma, tek kopya çalışma
 
-**Kurulum:** macOS 13+ ve Xcode Command Line Tools gerekir. `./build.sh` HexNote.app'i derler; `./make-dmg.sh` testleri çalıştırır, derler ve `HexNote.dmg` üretir.
+**İndir:** **[⬇ HexNote.dmg](https://github.com/Huseyinkayaw/HexNote/raw/main/release/HexNote.dmg)** — açın ve **HexNote**'i **Uygulamalar** klasörüne sürükleyin. macOS 13+ ve Apple Silicon (M1 veya üstü) gerekir. Uygulama Apple tarafından onaylanmadığı (notarize edilmediği) için ilk açılışta uyarı çıkar: uygulamaya sağ tıklayın → **Aç** → **Aç**, ya da **Sistem Ayarları → Gizlilik ve Güvenlik → Yine de Aç**.
+
+**Kaynaktan derleme:** macOS 13+ ve Xcode Command Line Tools gerekir. `./build.sh` HexNote.app'i derler; `./make-dmg.sh` testleri çalıştırır, derler ve `HexNote.dmg` üretir.
