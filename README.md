@@ -10,10 +10,16 @@ A lightweight single-page **sticky note** that lives on your macOS desktop. Ever
 - Font size up/down (`⌘+` / `⌘-`), find (`⌘F`), copy the whole note
 - Menu bar icon, launch at login, single-instance
 
+## Privacy & security
+- Makes no network connections.
+- The note is stored only on this Mac in `~/Library/Application Support/HexNote` (readable only by your user account).
+
 ## Download
 **[⬇ Download HexNote.dmg](https://github.com/Huseyinkayaw/HexNote/raw/main/release/HexNote.dmg)** — open it and drag **HexNote** into **Applications**.
 
 Requires macOS 13+ on Apple Silicon (M1 or later). The app is not notarized by Apple, so the first time you open it macOS will warn you: right-click the app → **Open** → **Open**, or go to **System Settings → Privacy & Security → Open Anyway**.
+
+SHA-256: `38484ab71049c442a8e674b75c3e7c200e08f41f0c19c2e142c3220bc039b099`
 
 ## Build from source
 Requirements: macOS 13+, Xcode Command Line Tools.
@@ -35,6 +41,10 @@ Masaüstünde duran tek sayfalık, hafif bir **yapışkan not** uygulaması. Yaz
 - Yazı boyutu büyütme/küçültme (`⌘+` / `⌘-`), bulma (`⌘F`), tüm notu kopyalama
 - Menü çubuğu simgesi, girişte başlatma, tek kopya çalışma
 
-**İndir:** **[⬇ HexNote.dmg](https://github.com/Huseyinkayaw/HexNote/raw/main/release/HexNote.dmg)** — açın ve **HexNote**'i **Uygulamalar** klasörüne sürükleyin. macOS 13+ ve Apple Silicon (M1 veya üstü) gerekir. Uygulama Apple tarafından onaylanmadığı (notarize edilmediği) için ilk açılışta uyarı çıkar: uygulamaya sağ tıklayın → **Aç** → **Aç**, ya da **Sistem Ayarları → Gizlilik ve Güvenlik → Yine de Aç**.
+**Gizlilik ve güvenlik**
+- İnternete bağlanmaz.
+- Not yalnızca bu Mac'te, `~/Library/Application Support/HexNote` içinde durur (yalnızca sizin kullanıcınız okuyabilir).
+
+**İndir:** **[⬇ HexNote.dmg](https://github.com/Huseyinkayaw/HexNote/raw/main/release/HexNote.dmg)** — açın ve **HexNote**'i **Uygulamalar** klasörüne sürükleyin. macOS 13+ ve Apple Silicon (M1 veya üstü) gerekir. Uygulama Apple tarafından onaylanmadığı (notarize edilmediği) için ilk açılışta uyarı çıkar: uygulamaya sağ tıklayın → **Aç** → **Aç**, ya da **Sistem Ayarları → Gizlilik ve Güvenlik → Yine de Aç**. SHA-256: `38484ab71049c442a8e674b75c3e7c200e08f41f0c19c2e142c3220bc039b099`
 
 **Kaynaktan derleme:** macOS 13+ ve Xcode Command Line Tools gerekir. `./build.sh` HexNote.app'i derler; `./make-dmg.sh` testleri çalıştırır, derler ve `HexNote.dmg` üretir.
