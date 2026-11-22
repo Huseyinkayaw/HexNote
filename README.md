@@ -4,6 +4,22 @@ A lightweight single-page **sticky note** that lives on your macOS desktop. Ever
 
 ![HexNote](docs/screenshot.png)
 
+## How to install & open
+Requires macOS 13+ on an Apple Silicon Mac (M1 or later).
+
+1. **[⬇ Download HexNote.dmg](https://github.com/Huseyinkayaw/HexNote/raw/main/release/HexNote.dmg)**
+2. Open the DMG and drag **HexNote** into the **Applications** folder.
+3. Open HexNote. Because the app is free and not notarized by Apple, macOS shows *"HexNote" Not Opened — Apple could not verify…*. Click **Done**.
+4. Open **System Settings → Privacy & Security**, scroll down to *"HexNote" was blocked…* and click **Open Anyway**, then enter your Mac password. You only need to do this once.
+
+Prefer Terminal? Steps 3–4 can be replaced with:
+
+```bash
+xattr -dr com.apple.quarantine /Applications/HexNote.app
+```
+
+SHA-256 of the DMG: `38484ab71049c442a8e674b75c3e7c200e08f41f0c19c2e142c3220bc039b099`
+
 ## Features
 - Auto-save (also saves before sleep and shutdown)
 - Window layer: locked behind on the desktop, always on top, or normal
@@ -13,17 +29,6 @@ A lightweight single-page **sticky note** that lives on your macOS desktop. Ever
 ## Privacy & security
 - Makes no network connections.
 - The note is stored only on this Mac in `~/Library/Application Support/HexNote` (readable only by your user account).
-
-## Download
-**[⬇ Download HexNote.dmg](https://github.com/Huseyinkayaw/HexNote/raw/main/release/HexNote.dmg)** — open it and drag **HexNote** into **Applications**.
-
-Requires macOS 13+ on Apple Silicon (M1 or later). The app is not notarized by Apple, so macOS blocks the first launch ("Apple could not verify…"). Click **Done**, then go to **System Settings → Privacy & Security**, scroll down and click **Open Anyway** next to HexNote. Or run this once in Terminal:
-
-```bash
-xattr -dr com.apple.quarantine /Applications/HexNote.app
-```
-
-SHA-256: `38484ab71049c442a8e674b75c3e7c200e08f41f0c19c2e142c3220bc039b099`
 
 ## Build from source
 Requirements: macOS 13+, Xcode Command Line Tools.
@@ -39,6 +44,17 @@ Requirements: macOS 13+, Xcode Command Line Tools.
 
 Masaüstünde duran tek sayfalık, hafif bir **yapışkan not** uygulaması. Yazdığınız her şey otomatik kaydedilir ve yeniden başlatmada korunur.
 
+**Kurulum ve ilk açılış** (macOS 13+, Apple Silicon / M1 ve üstü)
+
+1. **[⬇ HexNote.dmg dosyasını indirin](https://github.com/Huseyinkayaw/HexNote/raw/main/release/HexNote.dmg)**
+2. DMG'yi açın ve **HexNote**'i **Uygulamalar** klasörüne sürükleyin.
+3. HexNote'i açın. Uygulama ücretsiz olduğu ve Apple tarafından onaylanmadığı için macOS *"HexNote" Açılmadı — Apple … doğrulayamadı* uyarısı gösterir. **Bitti**'ye basın.
+4. **Sistem Ayarları → Gizlilik ve Güvenlik**'i açın, aşağı inip *"HexNote" engellendi* satırındaki **Yine de Aç**'a tıklayın ve Mac şifrenizi girin. Bu yalnızca bir kez yapılır.
+
+Terminal kullanıyorsanız 3–4. adımların yerine: `xattr -dr com.apple.quarantine /Applications/HexNote.app`
+
+DMG SHA-256: `38484ab71049c442a8e674b75c3e7c200e08f41f0c19c2e142c3220bc039b099`
+
 **Özellikler**
 - Otomatik kayıt (uyku / kapanma öncesi de kaydeder)
 - Pencere katmanı: masaüstünde arkada kilitli, her zaman üstte veya normal
@@ -48,7 +64,5 @@ Masaüstünde duran tek sayfalık, hafif bir **yapışkan not** uygulaması. Yaz
 **Gizlilik ve güvenlik**
 - İnternete bağlanmaz.
 - Not yalnızca bu Mac'te, `~/Library/Application Support/HexNote` içinde durur (yalnızca sizin kullanıcınız okuyabilir).
-
-**İndir:** **[⬇ HexNote.dmg](https://github.com/Huseyinkayaw/HexNote/raw/main/release/HexNote.dmg)** — açın ve **HexNote**'i **Uygulamalar** klasörüne sürükleyin. macOS 13+ ve Apple Silicon (M1 veya üstü) gerekir. Uygulama Apple tarafından onaylanmadığı (notarize edilmediği) için macOS ilk açılışı engeller ("Apple … doğrulayamadı"). **Bitti**'ye basın, sonra **Sistem Ayarları → Gizlilik ve Güvenlik**'te aşağı inip HexNote için **Yine de Aç**'a tıklayın. Ya da Terminal'de bir kez şunu çalıştırın: `xattr -dr com.apple.quarantine /Applications/HexNote.app` SHA-256: `38484ab71049c442a8e674b75c3e7c200e08f41f0c19c2e142c3220bc039b099`
 
 **Kaynaktan derleme:** macOS 13+ ve Xcode Command Line Tools gerekir. `./build.sh` HexNote.app'i derler; `./make-dmg.sh` testleri çalıştırır, derler ve `HexNote.dmg` üretir.
